@@ -14,10 +14,16 @@ public Factura (Pasajero pasajero, Vuelo vuelo, String clase, double monto) {
 
 public String GenerarTextoFactura(){
     StringBuilder sb = new StringBuilder();
-    sb.append("Pasajero").append(pasajero.getNombre()).append("\n");
-    sb
+    sb.append("Pasajero: ").append(pasajero.getNombre()).append("\n");
+    sb.append("Cedula: ").append(pasajero.getCedula()).append("\n");
+    sb.append("Correo: ").append(pasajero.getCorreo()).append("\n");
+    sb.append("Vuelo: ").append(vuelo.getOrigen()).append(" -> ").append(vuelo.getDestino()).append("\n");
+    sb.append("Clase: ").append(clase).append("\n");
+    sb.append("Monto: $").append(String.format("%.2f", monto));
 
+    retunr sb.toString();
 }
+
 
 
 
