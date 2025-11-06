@@ -21,7 +21,7 @@ public String GenerarTextoFactura(){
     sb.append("Clase: ").append(clase).append("\n");
     sb.append("Monto: $").append(String.format("%.2f", monto));
 
-    retunr sb.toString();
+    return sb.toString();
 }
 
 
