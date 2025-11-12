@@ -1,3 +1,4 @@
+package modelo;
 public class Factura {
 
 private  Pasajero pasajero;
@@ -5,7 +6,8 @@ private  Vuelo vuelo;
 private  String  clase;
 private double monto;
 
-public Factura (Pasajero pasajero, Vuelo vuelo, String clase, double monto) {
+public Factura (Pasajero pasajero, Vuelo vuelo, String clase, double monto,String origen, String destino){ 
+   
     this.pasajero = pasajero;
     this.vuelo = vuelo;
     this.clase = clase;
@@ -27,6 +29,7 @@ public String GenerarTextoFactura(){
 public double getMonto() {
     return monto;
 }
+
 public Vuelo getVuelo() {
     return vuelo;
 }
@@ -37,4 +40,15 @@ public String getClase() {
     return clase;
 }
 
+public static void main(String[] args) {
+    Pasajero pasajero = new Pasajero("Juan Perez", "123456789", 
+    "juan@gmail.com");
+    Avion avion = new Avion("Boeing 737", 20, 100);
+    Vuelo vuelo = new Vuelo("FL123", "Ciudad A", "Ciudad B", avion);
+    Factura factura = new Factura(pasajero, vuelo, "economica", 150.00,
+    vuelo.getOrigen(), vuelo.getDestino());
+    System.out.println(factura.GenerarTextoFactura());  
 }
+
+}
+

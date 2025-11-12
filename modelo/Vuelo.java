@@ -1,3 +1,4 @@
+package modelo;
 public class Vuelo {
     // Atributos
     private String codigoVuelo;
@@ -17,6 +18,13 @@ public class Vuelo {
         this.espaciosEconomicaDisponibles = avion.getCapacidadEconomica();
     }
 
+    public String getDestino() {
+        return destino;
+    }
+
+    public String getOrigen() {
+        return origen;
+    }
   
     public boolean verificarDisponibilidad(String clase) {
         if (clase.equalsIgnoreCase("ejecutiva")) {
