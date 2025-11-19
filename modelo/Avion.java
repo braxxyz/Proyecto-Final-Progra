@@ -1,9 +1,9 @@
 package modelo;
 public class Avion {
     
-    private String codigoAvion;
-    private int capacidadEjecutiva;
-    private int capacidadEconomica;
+    private String codigoAvion = codigoAvion;
+    private int capacidadEjecutiva = 2;
+    private int capacidadEconomica = 2;
 
    
     public Avion(String codigoAvion, int capacidadEjecutiva, int capacidadEconomica) {

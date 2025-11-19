@@ -40,15 +40,5 @@ public String getClase() {
     return clase;
 }
 
-public static void main(String[] args) {
-    Pasajero pasajero = new Pasajero("Juan Perez", "123456789", 
-    "juan@gmail.com");
-    Avion avion = new Avion("Boeing 737", 20, 100);
-    Vuelo vuelo = new Vuelo("FL123", "Ciudad A", "Ciudad B", avion);
-    Factura factura = new Factura(pasajero, vuelo, "economica", 150.00,
-    vuelo.getOrigen(), vuelo.getDestino());
-    System.out.println(factura.GenerarTextoFactura());  
-}
-
 }
 
