@@ -20,11 +20,8 @@ public class Tiquete {
         if (!vuelo.verificarDisponibilidad(clase)) {
             throw new IllegalArgumentException("No hay espacios disponibles en clase " + clase);
         }
-
     
         vuelo.reservarEspacio(clase);
-
-        
         calcularPrecio();
     }
 
@@ -39,14 +36,7 @@ public class Tiquete {
     }
 
     public Factura generarFactura() {
-        return new Factura(
-            pasajero,
-            vuelo,
-            clase,
-            precio,
-            vuelo.getOrigen(),
-            vuelo.getDestino()
-        );
+        return new Factura( pasajero, vuelo,clase, precio,vuelo.getOrigen(), vuelo.getDestino());
     }
 
     public String getCodigoTiquete() {
