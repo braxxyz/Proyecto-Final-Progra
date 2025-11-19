@@ -24,7 +24,7 @@ public class Reservacion {
     public Factura getFactura() {
         return factura;
     }
-    
+
      public String mostrarReservacion() {
         StringBuilder sb = new StringBuilder();
         sb.append(tiquete.getCodigoTiquete()).append("\n");
